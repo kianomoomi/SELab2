@@ -109,3 +109,174 @@
 </table>
 
 مجموع تعداد تغییرات: .......۶.......
+## تغییرات در گام ۲
+### گام ۲: تحلیل و وارسی برنامه از منظر تحقق و یا عدم تحقق اصول SOLID
+در خصوص این برنامه‌ای که نوشته شده بود و شما یک قابلیت به آن اضافه کردید، بر اساس اصول SOLID موارد نقض و یا محقق شدن هر کدام از آن اصول را بیان کنید. در بیان موارد تحقق و نقض، علت تحقق و یا نقض را نیز به صورت کامل توضیح دهید:
+<table dir='rtl'>
+<tbody>
+<tr>
+<td rowspan="2" width="240">
+<p>اصل 1</p>
+<p>Single Responsibility</p>
+</td>
+<td width="95">
+<p><strong>موارد تحقق</strong></p>
+</td>
+<td width="454">
+<p>در سایر کلاس‌ها می‌توان گفت تقزیبا این اصل رعایت شده و تخلف شدیدی صورت نگرفته</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>موارد نقض</strong></p>
+</td>
+<td>
+<p>اینترفیس OrderService دارای توابعی است که هم مربوط به ثبت و هم مربوط به پرداخت است. بهتر است توابع هر یک از این دو کاربرد در اینترفیس‌های جدا تعریف شود.</p>
+</td>
+</tr>
+<tr>
+<td rowspan="2">
+<p>اصل 2</p>
+<p>Open-Close Principle (OCP)</p>
+</td>
+<td>
+<p><strong>موارد تحقق</strong></p>
+</td>
+<td>
+<p>اینترفیس OrderService این اصل را رعایت کرده است. می‌توان قابلیت‌های جدید به آن اضافه کرد بدون آنکه لازم باشد ساختار موجود را تغییر داد.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>موارد نقض</strong></p>
+</td>
+<td>
+<p>می‌توان گفت کلاس‌ها این اصل را رعایت کرده‌اند و تخلف شدیدی صورت نگرفته است.</p>
+</td>
+</tr>
+<tr>
+<td rowspan="2">
+<p>اصل 3</p>
+<p>Liskov Substitution Principle</p>
+</td>
+<td>
+<p><strong>موارد تحقق</strong></p>
+</td>
+<td>
+<p>کلاس‌های OnlineOrderService و OnSiteOrderService و PhoneOrderService می‌توانند به‌جای اینترفیس پدر خود یعنی OrderService استفاده شوند و بنابراین این اصل رعایت شده است.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>موارد نقض</strong></p>
+</td>
+<td>
+<p>تخلفی برای این اصل رخ نداده است.</p>
+</td>
+</tr>
+<tr>
+<td rowspan="2">
+<p>اصل 4</p>
+<p>Interface Segregation Principle</p>
+</td>
+<td>
+<p><strong>موارد تحقق</strong></p>
+</td>
+<td>
+<p>این اصل محقق نشده است.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>موارد نقض</strong></p>
+</td>
+<td>
+<p>اینترفیس OrderService شامل توابعی است که هم برای ثبت سفارش و هم برای پرداخت استفاده می‌شوند. بنابراین کلاس‌های استفاده‌کننده از آن مجبور می‌شوند همه این توابع را پیاده‌سازی کنند، حتی اگر بعضی از آن‌ها را نیاز نداشته باشند.</p>
+</td>
+</tr>
+<tr>
+<td rowspan="2">
+<p>اصل 5</p>
+<p>Dependency Inversion Principle</p>
+</td>
+<td>
+<p><strong>موارد تحقق</strong></p>
+</td>
+<td>
+<p>کلاس Main وابسته به اینترفیس سطح بالا Order Service می‌باشد و وابسته به کلاس‌های سطح پایین‌تر آن نمی‌باشد.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>موارد نقض</strong></p>
+</td>
+<td>
+<p>برای این اصل تخلف شدیدی رخ نداده است.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+در خصوص هرکدام از موارد نقض هرکدام از اصول، یک راهکار را به منظور رفع آن مشکل ارایه داده و در جدول زیر ثبت نمایید:
+
+<table dir='rtl'>
+<tbody>
+<tr>
+<td width="168">
+<p><strong>اصل مربوطه (از اصول </strong><strong>SOLID</strong><strong>)</strong></p>
+</td>
+<td width="246">
+<p><strong>علت نقض</strong></p>
+</td>
+<td width="284">
+<p><strong>راه حل پیشنهادی</strong></p>
+</td>
+</tr>
+<tr>
+<td width="168">
+<p>&nbsp;</p>
+</td>
+<td width="246">
+<p>&nbsp;</p>
+</td>
+<td width="284">
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width="168">
+<p>&nbsp;</p>
+</td>
+<td width="246">
+<p>&nbsp;</p>
+</td>
+<td width="284">
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width="168">
+<p>&nbsp;</p>
+</td>
+<td width="246">
+<p>&nbsp;</p>
+</td>
+<td width="284">
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width="168">
+<p>&nbsp;</p>
+</td>
+<td width="246">
+<p>&nbsp;</p>
+</td>
+<td width="284">
+<p>&nbsp;</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+
