@@ -40,24 +40,16 @@ public class Main {
         customerAnswerForPaymentMethod = scanner.nextInt();
         if (customerAnswerForPaymentMethod == 1) {
             orderService = new OnlineOrderService();
-            orderService.onlineOrderRegister(customerName);
         } else if (customerAnswerForPaymentMethod == 2) {
             orderService = new OnSiteOrderService();
-            orderService.onSiteOrderRegister(customerName);
         } else if (customerAnswerForPaymentMethod == 3) {
             orderService = new PhoneOrderService();
-            orderService.PhoneOrderRegister(customerName);
         }
+        orderService.orderRegister(customerName);
 
-            //Step3 : pay price
+        //Step3 : pay price
         System.out.println("Pay Price:");
-        if (orderService instanceof OnlineOrderService) {
-            orderService.onlineOrderPayment(order.getTotalPrice());
-        } else if (orderService instanceof OnSiteOrderService) {
-            orderService.onSiteOrderPayment(order.getTotalPrice());
-        } else if (orderService instanceof PhoneOrderService) {
-            orderService.PhoneOrderPayment(order.getTotalPrice());
-        }
+        orderService.orderPayment(order.getTotalPrice());
 
         //Finally Print Bill
         System.out.println(order);
