@@ -77,9 +77,37 @@
 <p>توابع PhoneOrderRegister و PhoneOrderPayment دارای پیاده‌سازی هستند و سایر توابع بدنه خالی دارند</p>
 </td>
 </tr>
-<tr>
+    <tr>
 <td width="64">
 <p><strong>۵</strong></p>
+</td>
+<td width="198">
+<p>Online Order Service</p>
+</td>
+<td width="141">
+<p>افزودن توابع مربوط به Phone Register and Phone Payment </p>
+</td>
+<td width="292">
+<p>توابع جدیدی که به اینترفیس OrderService اضافه شدند باید در اینجا نیز Override بشوند (هرچند با بدنه خالی).</p>
+</td>
+</tr>
+    <tr>
+<td width="64">
+<p><strong>۶</strong></p>
+</td>
+<td width="198">
+<p>OnSite Order Service</p>
+</td>
+<td width="141">
+<p> افزودن توابع مربوط به Phone Register and Phone Payment </p>
+</td>
+<td width="292">
+<p>توابع جدیدی که به اینترفیس OrderService اضافه شدند باید در اینجا نیز Override بشوند (هرچند با بدنه خالی).</p>
+</td>
+</tr>
+<tr>
+<td width="64">
+<p><strong>۷</strong></p>
 </td>
 <td width="198">
 <p>Main</p>
@@ -93,7 +121,7 @@
 </tr>
 <tr>
 <td width="64">
-<p><strong>۶</strong></p>
+<p><strong>۸</strong></p>
 </td>
 <td width="198">
 <p>Main</p>
@@ -108,7 +136,7 @@
 </tbody>
 </table>
 
-مجموع تعداد تغییرات: .......۶.......
+مجموع تعداد تغییرات: .......۸.......
 ## تغییرات در گام ۲
 ### گام ۲: تحلیل و وارسی برنامه از منظر تحقق و یا عدم تحقق اصول SOLID
 در خصوص این برنامه‌ای که نوشته شده بود و شما یک قابلیت به آن اضافه کردید، بر اساس اصول SOLID موارد نقض و یا محقق شدن هر کدام از آن اصول را بیان کنید. در بیان موارد تحقق و نقض، علت تحقق و یا نقض را نیز به صورت کامل توضیح دهید:
